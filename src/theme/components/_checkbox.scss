@@ -1,0 +1,104 @@
+.custom-checkbox {
+  position: relative;
+  input {
+    position: absolute;
+    left: -9999px;
+    height: 16px;
+    width: 16px;
+  }
+  label {
+    font-size: 14px;
+    font-family: $secondary-font-family;
+    padding-left: 20px;
+    &:before {
+      content: "";
+      border-radius: 4px;
+      height: 14px;
+      width: 14px;
+      border: solid 1px $primary-color;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 3px;
+      background-color: #f8f8f8;
+    }
+    &:after {
+      content: "";
+      display: none;
+      border: solid $primary-color;
+      border-width: 0 0 1px 1px;
+      transform: rotate(-45deg);
+      height: 4px;
+      width: 7px;
+      position: absolute;
+      left: 3px;
+      top: 7px;
+    }
+  }
+  &.outline {
+    line-height: 18px;
+    label {
+      &:before {
+        border-color: $primary-color;
+        background-color: transparent;
+      }
+    }
+    input:checked {
+      & + label {
+        &:before {
+          border-color: $primary-color;
+          background-color: $primary-color;
+        }
+        &:after {
+          border-color: $white;
+        }
+      }
+    }
+  }
+  &.primary-checkbox {
+    label {
+      padding-left: 25px;
+      &:before {
+        height: 15px;
+        width: 15px;
+        background-color: transparent !important;
+        border-radius: 2px;
+        border-color: $primary-color !important;
+      }
+      &:after {
+        border: solid #ffffff;
+        border-width:0 0 1.5px 1.5px;
+        height: 4px;
+        width: 8px;
+        left: 4px;
+        top: 8px;
+      }
+    }
+    input:checked + label{
+      &:before{
+        background-color: $primary-color !important;
+      }
+      &:after{
+        border-color: #ffffff !important;
+      }
+    }
+  }
+}
+
+.custom-checkbox input:checked ~ label:after {
+  display: inline-block;
+}
+
+.dark {
+  .custom-checkbox {
+    label {
+      &:before {
+        border-color: $white;
+        background-color: $dark-primary-bg;
+      }
+      &:after {
+        border-color: $white;
+      }
+    }
+  }
+}

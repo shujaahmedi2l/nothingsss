@@ -1,0 +1,31 @@
+  <div class="confirm-dialog" [ngClass]="sharedDataService.appConfigSource.value.theme">
+    <div class="modal-header" *ngIf="title">
+      <ng-container *ngIf="title">
+        <h3 class="modal-title">{{title}}</h3>
+      </ng-container>
+      <ng-container>
+        <button class="btn btn-icon close" (click)="decline()">
+          <i class="icon-cancel middle"></i>
+        </button>
+      </ng-container>
+    </div>
+    <div class="modal-body">
+      <div class="d-flex flex-column justify-content-center align-content-center">
+        <ng-container *ngIf="iconClass">
+          <i class="{{iconClass}}"></i>
+        </ng-container>
+        <ng-container >
+          <img class="mx-auto my-4" [lazyLoad]="iconClass || '/assets/images/confirm-icon.png'" alt="testing" />
+        </ng-container>
+        <p class="message text-center"> {{message}}</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn close btn-outline-primary" (click)="decline()">
+        {{btnCancelText? btnCancelText : 'Cancel' }}
+      </button>
+      <button type="button" class="btn btn-primary" (click)="accept()">
+        {{!btnOkText ? 'OK': btnOkText}}
+      </button>
+    </div>
+  </div>

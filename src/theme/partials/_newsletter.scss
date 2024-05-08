@@ -1,0 +1,50 @@
+.newsletter-form {
+    position: relative;
+    max-width: 270px;
+    button {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background-color: $primary-color;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      color: $white;
+      font-size: 12px;
+      display: inline-block;
+      i {
+        line-height: 30px;
+      }
+    }
+}
+.dark {
+    .newsletter-form {
+        .form-control {
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          background-color: #2d479c !important;
+        }
+    }
+}
+@include responsive("xs") {
+  .newsletter-form {
+    max-width: 100%;
+  }
+}
+
+::ng-deep {
+  .rtl-mode {
+    .newsletter-form {
+      button {
+        left: 8px;
+        right: auto !important;
+        transform: rotate(180deg);
+      }
+      .form-control {
+        direction: ltr;
+        text-align: right;
+      }
+    }
+  }
+}

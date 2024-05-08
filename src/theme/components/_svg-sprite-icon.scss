@@ -1,0 +1,13 @@
+.svg-sprite-icon{
+  path, g{
+    fill: black !important;
+  }
+}
+
+.dark {
+  .svg-sprite-icon{
+    path, g{
+      fill: white !important;
+    }
+  }
+}

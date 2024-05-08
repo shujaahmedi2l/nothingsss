@@ -1,0 +1,31 @@
+
+@if (NewVersionNotficationflag) {
+	<ngb-alert  type="success" [dismissible]="false">
+    <div class="d-flex justify-content-between">
+
+        <p>A newer version of this application is available.</p>
+
+        <button class="btn btn-success btn-sm" (click)="ReloadPage()">Click Here</button>
+
+        <button type="button" class="btn-close" (click)="close()"></button>
+
+    </div>
+  </ngb-alert>
+}
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-12 bg-body-secondary">
+    <app-header></app-header>
+  </div>
+  <div class="col-md-3">
+    <app-side-bar></app-side-bar>
+  </div>
+  <div class="col-md-9">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+</div>
+
+
+

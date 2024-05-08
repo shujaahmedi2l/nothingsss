@@ -1,0 +1,196 @@
+.form-label{
+  font-size: 14px;
+  font-weight: 600;
+  font-family: $secondary-font-family;
+  position: relative;
+  padding-right: 12px;
+  &.required{
+    &:before{
+      content: '*';
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $primary-color;
+    }
+  }
+}
+
+.form-control{
+  height: 45px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: solid 1px #4e5771;
+  color: $black !important;
+  background-color: $white;
+  font-family: $secondary-font-family;
+  &.error {
+    border-color: var(--bs-danger);
+  }
+  &.ng-touched {
+    &.ng-invalid {
+      border-color: var(--bs-danger);
+    }
+  }
+  &:focus,
+  &:focus-within {
+    border: solid 1px #4e5771;
+    color: $black !important;
+    background-color: $white !important;
+    box-shadow: none !important;
+  }
+  &:read-only{
+    background-color: #e9ecef;
+  }
+}
+input.form-control:-webkit-autofill,
+input.form-control:-webkit-autofill:hover,
+input.form-control:-webkit-autofill:focus,
+input.form-control:-webkit-autofill:active {
+  -webkit-text-fill-color: $black !important;
+  background-color: $white;
+  -webkit-box-shadow: 0 0 0px 1000px $white inset;
+}
+::placeholder {
+  color: #2c2a73;
+  opacity: 0.75;
+}
+select {
+  background-image: url(/assets/images/select-dark.png);
+  background-repeat: no-repeat;
+  background-position: 98% center;
+  opacity: 0.75;
+}
+input, textarea{
+  background-color: transparent;
+  border-radius: 8px;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+}
+textarea {
+  min-height: 88px;
+}
+.dark {
+  input.form-control,
+  textarea.form-control {
+    color: #ffffff !important;
+    background-color: $dark-primary-bg !important;
+    &:focus,
+    &:focus-within{
+      border-color: #ffffff;
+      color: #ffffff !important;
+      background-color: $dark-primary-bg !important;
+    }
+  }
+  .form-label {
+    color: #ffffff !important;
+  }
+  ::placeholder{
+    color: #a4a8b0 !important;
+  }
+  select {
+    background-image: url(/assets/images/select.png);
+    background-color: $dark-primary-bg;
+    color: #ffffff !important;
+    &:focus {
+      background-color: $dark-primary-bg !important;
+      color: #ffffff !important;
+    }
+  }
+  input.form-control:-webkit-autofill,
+  input.form-control:-webkit-autofill:hover,
+  input.form-control:-webkit-autofill:focus,
+  input.form-control:-webkit-autofill:active {
+    -webkit-text-fill-color: #ffffff !important;
+    background-color: $dark-primary-bg !important;
+    -webkit-box-shadow: 0 0 0px 1000px $dark-primary-bg inset;
+  }
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+}
+
+input {
+  &::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+  }
+  &::-webkit-contacts-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+  }
+}
+
+::ng-deep{
+  .intl-tel-input{
+    font-family: $secondary-font-family;
+    .iti__flag-container{
+      left: 0;
+      .iti__selected-flag{
+        display: inline-flex;
+        padding: 0 11px;
+
+      }
+    }
+    #input-phone-number {
+      border-color: #4e5771;
+    }
+    ::placeholder{
+      color: #7d828e !important;
+    }
+
+  }
+  .rtl-mode {
+    select {
+      background-position: 3% center;
+    }
+    .form-control {
+      direction:ltr;
+      text-align: right;
+    }
+    .form-label{
+      padding-right: 0;
+      padding-left: 12px;
+      &.required{
+        &:before{
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+  }
+  .dark{
+    .intl-tel-input{
+      input, .iti__flag-container{
+        background-color: $dark-primary-bg !important;
+        color: #ffffff !important;
+        -webkit-box-shadow: 0 0 0 1000px $dark-primary-bg inset;
+        &:focus {
+          background-color: $dark-primary-bg !important;
+          color: #ffffff !important;
+          -webkit-text-fill-color:#fff !important;
+          -webkit-box-shadow: 0 0 0 1000px $dark-primary-bg inset;
+        }
+        &:focus-visible {
+          background-color: $dark-primary-bg !important;
+          color: #ffffff !important;
+          -webkit-text-fill-color:#fff !important;
+          -webkit-box-shadow: 0 0 0 1000px $dark-primary-bg inset;
+        }
+        &:-webkit-autofill {
+          background-color: $dark-primary-bg !important;
+          color: #ffffff !important;
+          -webkit-text-fill-color:#fff !important;
+          -webkit-box-shadow: 0 0 0 1000px $dark-primary-bg inset;
+        }
+      }
+      ::placeholder{
+        color: #7d828e !important;
+      }
+    }
+  }
+}

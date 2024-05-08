@@ -1,0 +1,18 @@
+.page-header {
+  padding: 40px 0 20px 0;
+  .page-title {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .search-bar {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+.dark {
+  .page-header {
+    .page-title {
+      color: #ffffff !important;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+input:not(.quest-date)::-webkit-calendar-picker-indicator{
+  display: none;
+}
+
+input:not(.quest-date)[type="date"]::-webkit-input-placeholder{
+  visibility: hidden !important;
+}
+
+::ng-deep{
+  .cloud-theme .bs-datepicker-head {
+    background-color: $primary-color;
+  }
+  .cloud-theme .btn-today-wrapper .btn-success, .cloud-theme .btn-clear-wrapper .btn-success {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+  .cloud-theme .btn-today-wrapper .btn-success:not(:disabled):not(.disabled):active, .cloud-theme .btn-clear-wrapper .btn-success:not(:disabled):not(.disabled):active {
+    background-color: $primary-color;
+    border-color:$primary-color;
+  }
+  .cloud-theme .btn-today-wrapper .btn-success:hover, .cloud-theme .btn-clear-wrapper .btn-success:hover {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+  .cloud-theme .bs-datepicker-predefined-btns button.selected {
+    background-color: $primary-color;
+  }
+  .cloud-theme .bs-datepicker-body table td span.selected, .cloud-theme .bs-datepicker-body table td.selected span,
+  .cloud-theme .bs-datepicker-body table td span[class*=select-]:after, .cloud-theme .bs-datepicker-body table td[class*=select-] span:after {
+    background-color: $primary-color;
+  }
+  .cloud-theme .bs-datepicker-body table td.week span {
+    color: $primary-color;
+  }
+  .cloud-theme .bs-datepicker-body table td.active-week span:hover {
+    background-color: $primary-color;
+  }
+  .cloud-theme{
+    &.dark{
+      background-color: $dark-primary-bg;
+      .bs-datepicker-body{
+        border-color: $dark-border-color;
+      }
+      .bs-datepicker-body table td {
+        color: #fff;
+      }
+      .bs-datepicker-head {
+        background-color: $dusk-blue;
+        button {
+          background-color: transparent;
+        }
+      }
+      .btn-today-wrapper .btn-success, .cloud-theme .btn-clear-wrapper .btn-success {
+        background-color: $dusk-blue;
+        border-color: $dusk-blue;
+      }
+      .btn-today-wrapper .btn-success:not(:disabled):not(.disabled):active, .cloud-theme .btn-clear-wrapper .btn-success:not(:disabled):not(.disabled):active {
+        background-color: $dusk-blue;
+        border-color:$dusk-blue;
+      }
+      .btn-today-wrapper .btn-success:hover, .cloud-theme .btn-clear-wrapper .btn-success:hover {
+        background-color: $dusk-blue;
+        border-color: $dusk-blue;
+      }
+      .bs-datepicker-predefined-btns button.selected {
+        background-color: $dusk-blue;
+      }
+      .bs-datepicker-body table td span.selected, .cloud-theme .bs-datepicker-body table td.selected span,
+      .bs-datepicker-body table td span[class*=select-]:after, .cloud-theme .bs-datepicker-body table td[class*=select-] span:after {
+        background-color: $dusk-blue;
+      }
+      .bs-datepicker-body table td.week span {
+        color: $dusk-blue;
+      }
+      .bs-datepicker-body table td.active-week span:hover {
+        background-color: $dusk-blue;
+      }
+      .bs-datepicker-body table td.is-highlighted:not(.disabled):not(.selected) span,
+      .bs-datepicker-body table td span.is-highlighted:not(.disabled):not(.selected) {
+        background-color: rgba($dusk-blue, .8);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,19 @@
+.table-listing{
+  &-header{
+    border-bottom: 1px solid #dddddd;
+    h3{
+      font-size: 18px;
+    }
+    .app-search-bar{
+      width: 100%;
+      max-width: 276px;
+    }
+  }
+  &.dark{
+    .table-listing-header{
+      h3{
+        color: #ffffff;
+      }
+    }
+  }
+}

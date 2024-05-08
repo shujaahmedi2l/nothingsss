@@ -1,0 +1,129 @@
+/*=============General Styling===============*/
+body {
+  font-family: $primary-font-family;
+  color: $black;
+  overflow-x: hidden;
+  height: 100%;
+  background-color: $body;
+  &.dark {
+    background-color: $black;
+    color: $body;
+  }
+  &.modal-open{
+    overflow-y: hidden;
+  }
+}
+a,
+button {
+  color: inherit;
+  text-decoration: none;
+  &:focus,
+  &:active {
+    color: inherit;
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &.underline{
+    &, &:hover{
+      text-decoration: underline !important;
+    }
+  }
+}
+
+a {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: $primary-color;
+    text-decoration: none !important;
+  }
+}
+
+.dark{
+  color: #ffffff;
+}
+
+*,
+.fancy-scroll {
+  &::-webkit-scrollbar-track {
+    background-color: $gray;
+    border-radius: 10px;
+    visibility: hidden;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+    visibility: hidden;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: #9d9d9d;
+    }
+  }
+  &.scroll-transparent {
+    &:hover {
+      &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.fancy-scroll {
+  overflow-y: auto;
+}
+.rtl-mode {
+  direction: rtl;
+  .ms-auto {
+      margin-right: auto !important;
+      margin-left: 0 !important;
+  }
+  .me-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+  .pe-3 {
+    padding-right: 0 !important;
+    padding-left: 1rem !important;
+  }
+  .ms-3 {
+    margin-left: 0 !important;
+    margin-right: 1rem !important;
+  }
+  .ps-3 {
+    padding-left: 0 !important;
+    padding-right: 1rem !important;
+  }
+}
+@media (min-width: 768px){
+    .rtl-mode {
+      .ms-md-5 {
+        margin-right: 3rem !important;
+        margin-left: 0 !important;
+      }
+      .ms-md-3 {
+        margin-left: 0 !important;
+        margin-right: 1rem !important;
+      }
+    }
+
+}
+@media (min-width: 992px){
+    .rtl-mode {
+      .pe-lg-5 {
+        padding-left: 3rem !important;
+        padding-right: 0 !important;
+      }
+      .me-lg-5 {
+        margin-left: 3rem !important;
+        margin-right: 0 !important;
+      }
+    }
+}

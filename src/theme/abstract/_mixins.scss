@@ -1,0 +1,71 @@
+@mixin responsive($breakpoint){
+  @if $breakpoint == xs{
+    @media only screen and (max-width: 36em) {@content}   /* 576/16 == 36em == 576   called xs 576px */
+  }
+  @if $breakpoint == phone{
+    @media only screen and (max-width: 37.5em) {@content}   /* 600/16 == 37.5em == 600px   called phone 600px */
+  }
+  @if $breakpoint == sm{
+    @media only screen and (max-width: 48em) {@content}   /* 768/16 == 48em == 768px   called sm 768px */
+  }
+  @if $breakpoint == md{
+    @media only screen and (max-width: 61.9375em) {@content}   /* 991/16 == 61.9375em == 991   called md 991px */
+  }
+  @if $breakpoint == tab-port{
+    @media only screen and (max-width: 56.25em) {@content}  /* 900/16 == 56.25em == 900px called tab-port 900px */
+  }
+  @if $breakpoint == tab-land{
+    @media only screen and (max-width: 75em) {@content}    /* 1200/16 == 75em == 1200px called md */
+  }
+  @if $breakpoint == small-desktop{
+    @media only screen and (max-width: 87.5em) {@content}    /* 1400/16 == 87.5em == 1400px */
+  }
+  @if $breakpoint == big-desktop{
+    @media only screen and (min-width: 112.5em) {@content} /* 1800/16 == 112.5em == 1800px */
+  }
+}
+
+@mixin icon($code){
+  content: $code !important;
+  font-family: "kaust" !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@mixin btn($code){
+  background-color: $primary-color !important;
+  border: 1px solid $primary-color !important;
+  &:hover{
+    background-color: transparent !important;
+    color: $primary-color !important;
+  }
+}
+@mixin btn-secondary($code){
+  background-color: transparent !important;
+  border: 2px solid $white !important;
+  color: $white !important;
+  &:hover{
+    background-color: $primary-color !important;
+    color: $white !important;
+    border-color: $primary-color !important;
+  }
+}
+
+@mixin noNumberArrows {
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

@@ -1,0 +1,44 @@
+.custom-radio {
+  position: relative;
+  input {
+    position: absolute;
+    left: -9999px;
+    height: 24px; /* Adjust the height to increase the size */
+    width: 24px; /* Adjust the width to increase the size */
+  }
+  label {
+    padding-left: 30px; /* Adjust as needed */
+    &:before {
+      content: "";
+      border-radius: 50%;
+      height: 14px; /* Adjust the size of the outer circle */
+      width: 14px; /* Adjust the size of the outer circle */
+      border: 2px solid $primary-color;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 5px; /* Adjust the vertical position of the outer circle */
+      background-color: transparent;
+      cursor: pointer;
+    }
+    &:after {
+      content: "";
+      display: none;
+      height: 6px; /* Adjust the size of the inner circle */
+      width: 6px; /* Adjust the size of the inner circle */
+      position: absolute;
+      left: 4px; /* Adjust the horizontal position of the inner circle */
+      top: 9px;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: $primary-color;
+    }
+  }
+  input:checked {
+    & + label {
+      &:after {
+        display: inline-block;
+      }
+    }
+  }
+}

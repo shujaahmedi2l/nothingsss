@@ -1,0 +1,27 @@
+@import "src/theme/abstract/variable";
+
+.view-toggles {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  height: 45px;
+  button {
+    padding: 10px 12px;
+    border-radius: 9px;
+    font-size: 20px;
+    &.active {
+      background-color: $dusk-blue;
+      color: #fff;
+    }
+  }
+}
+.dark {
+  .view-toggles {
+    background-color: $dark-primary-bg;
+    button {
+      color: $dusk-blue;
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+}

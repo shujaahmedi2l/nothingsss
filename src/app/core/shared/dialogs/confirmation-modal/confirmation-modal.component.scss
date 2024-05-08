@@ -1,0 +1,37 @@
+@import "src/theme/abstract/variable";
+.confirm-dialog {
+  padding: 30px;
+  border-radius: 10px;
+  .modal-header {
+    position: relative;
+  }
+  .modal-body {
+    padding: 0 0 30px;
+    img {
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+  }
+  .modal-footer {
+    border: none;
+    padding: 0;
+    justify-content: space-between;
+    .btn {
+      flex: 0 0 48%;
+    }
+    .message {
+      font-size: 21px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+  &.dark {
+    background-color: $dark-secondary-bg;
+    .message {
+      color: $white;
+    }
+  }
+  &.light{
+    background-color: $white;
+  }
+}

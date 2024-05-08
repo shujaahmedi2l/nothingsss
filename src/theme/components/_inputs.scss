@@ -1,0 +1,16 @@
+::placeholder {
+  color: $white;
+  opacity: 1;
+}
+input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+.dark {
+  ::placeholder {
+    color: #2c2a73;
+  }
+}
